@@ -14,7 +14,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        return Reservation::get();
+        return Reservation::with('client')->get();
     }
 
     /**
@@ -46,7 +46,7 @@ class ReservationController extends Controller
      */
     public function show($id)
     {
-        echo "eL Id Es: $id";
+        return Reservation::with('client')->find($id);
     }
 
     /**

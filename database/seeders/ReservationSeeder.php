@@ -16,10 +16,17 @@ class ReservationSeeder extends Seeder
     {
         $reservation = new Reservation();
 
-        $reservation->client_id = "1";
+        $reservation->client_id = 1;
         $reservation->arrival_date = "2010-12-01";
-        $reservation->departure_date = "2010-12-03";
-        $reservation->room_id = "1";
+        $reservation->price = 2000;
+        
+        $reservation->save();
+
+        $reservation = new Reservation();
+
+        $reservation->client_id = 2;
+        $reservation->arrival_date = "2010-12-01";
+        $reservation->price = 1500;
         
         $reservation->save();
     }
