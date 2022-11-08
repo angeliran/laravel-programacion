@@ -8,8 +8,8 @@
 </head>
 <body>
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
-        <h1 style="background-color: rgb(50,50,50,0.7); color: white; border-radius: 10px; width: 80%; padding: 20px; display: flex; justify-content: center; align-items: center;">Clients</h1>
-        <table style="background-color: black; color: white; width: 50%;">
+        <h1 style="background-color: rgb(50,50,50,0.7); color: white; border-radius: 10px; width: 100%; padding: 20px; display: flex; justify-content: center; align-items: center;">Clients</h1>
+        <table style="background-color: rgb(50,50,50,0.5); color: white; width: 80%; border-radius: 10px; padding: 10px 0 10px 0">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -26,7 +26,7 @@
                     <td style="text-align: center;">{{$client->name}}</td>
                     <td style="text-align: center;">{{$client->email}}</td>
                     <td style="text-align: center;">{{$client->phone_number}}</td>
-                    <td><a href="{{ url('clients/edit', $client->id) }}">Editar</a></td>
+                    <td style="text-align: center;"><a style="text-decoration: none;" href="{{ url('clients/edit', $client->id) }}">Editar</a></td>
                 </tr>
                 @endforeach
             </tbody>
